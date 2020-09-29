@@ -88,7 +88,8 @@
       <plugin name="left_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>30.0</updateRate>
-        <cameraName>${namespace}/duo3d_left</cameraName>
+        <!--cameraName>${namespace}/duo3d_left</cameraName -->
+	<cameraName>left</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>${namespace}/duo3d_left_link</frameName>
@@ -147,10 +148,12 @@
       <plugin name="right_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>30.0</updateRate>
-        <cameraName>${namespace}/duo3d_right</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
+        <!--cameraName>${namespace}/duo3d_right</cameraName-->
+	<cameraName>right</cameraName>        
+	<imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>${namespace}/duo3d_right_link</frameName>
+	<!--frameName>rexrov2/duo3d_right_link</frameName-->
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>${k1l}</distortionK1>
         <distortionK2>${k2l}</distortionK2>
